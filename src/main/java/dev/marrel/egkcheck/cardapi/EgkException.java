@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class EgkException extends Exception {
     private final int errortype;
     public static final HashMap<Integer, String> ERROR_TYPE;
-    static {
+    static { // [S5 reader.py]
         ERROR_TYPE = new HashMap<>();
         ERROR_TYPE.put(0x0000, "UNKNOWN ERROR");
         ERROR_TYPE.put(0x6283, "Card is deactivated!");
