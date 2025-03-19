@@ -222,7 +222,7 @@ public class EgkAPI {
      */
     public boolean checkXmlSchemaValid(XMLFILE xmlfile) throws CardException, EgkException {
         String xml = getXMLFile(xmlfile);
-        return XMLTools.validateAgainstXSD(xml, new File(Objects.requireNonNull(getClass().getResource("/Schema_VSD.xsd")).getFile()));
+        return XMLTools.validateAgainstXSD(xml, Objects.requireNonNull(getClass().getResourceAsStream("/Schema_VSD.xsd")));
     }
 
     /**

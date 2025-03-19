@@ -99,7 +99,7 @@ public class XMLTools {
         return document.getDocumentElement();
     }
 
-    public static boolean validateAgainstXSD(String xml, File xsdFile) {
+    public static boolean validateAgainstXSD(String xml, InputStream xsdFile) {
         SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
         Source schemaFile = new StreamSource(xsdFile);
         Schema schema;
